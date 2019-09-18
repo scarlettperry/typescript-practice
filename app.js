@@ -68,3 +68,26 @@ myRealAge = "1001";
 // myRealAge = false;
 //check types
 console.log(typeof myRealAge);
+//can do conditional statements
+//exercise
+//before
+// let bankAccount = {
+//     money: 2000,
+//     deposit(value) {
+//         this.money += value;
+//     }
+// };
+//after
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money += value;
+    }
+};
+var myself = {
+    name: "Max",
+    bankAccount: bankAccount,
+    hobbies: ["Sports", "Cooking"]
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
